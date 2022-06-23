@@ -1,0 +1,182 @@
+<mxfile host="65bd71144e">
+    <diagram id="6kVsiIoXBoyYu3Yb7DmN" name="Page-1">
+        <mxGraphModel dx="1048" dy="537" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="2700" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="Client" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="200" width="280" height="880" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="访问页面" style="rounded=0;whiteSpace=wrap;html=1;" parent="3" vertex="1">
+                    <mxGeometry x="80" y="80" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="组装clientInfo&lt;br&gt;(visitorId+pageId)" style="rounded=0;whiteSpace=wrap;html=1;" parent="3" vertex="1">
+                    <mxGeometry x="80" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="展示user" style="rounded=0;whiteSpace=wrap;html=1;" parent="3" vertex="1">
+                    <mxGeometry x="80" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="关闭页面&lt;br&gt;切换页面" style="rounded=0;whiteSpace=wrap;html=1;" parent="3" vertex="1">
+                    <mxGeometry x="80" y="380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="endArrow=classic;html=1;rounded=0;" parent="3" target="22" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="232" y="230" as="sourcePoint"/>
+                        <mxPoint x="232" y="240" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="232" y="310"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="47" value="接收广播消息" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="46" vertex="1" connectable="0">
+                    <mxGeometry x="-0.4565" y="-1" relative="1" as="geometry">
+                        <mxPoint x="-9" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="74" value="onclose" style="edgeStyle=none;rounded=0;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="3" target="65" edge="1">
+                    <mxGeometry x="-0.2308" relative="1" as="geometry">
+                        <mxPoint x="230" y="690" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="230" y="610"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="73" style="edgeStyle=none;rounded=0;html=1;" parent="3" source="65" target="72" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="reconnect" style="rounded=0;whiteSpace=wrap;html=1;" parent="3" vertex="1">
+                    <mxGeometry x="80" y="580" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" style="edgeStyle=none;rounded=0;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="3" source="72" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="40" y="720"/>
+                            <mxPoint x="40" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="76" value="否" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="75" vertex="1" connectable="0">
+                    <mxGeometry x="0.0686" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="78" value="是" style="edgeStyle=none;rounded=0;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="3" source="72" target="77" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="超时？" style="rhombus;whiteSpace=wrap;html=1;" parent="3" vertex="1">
+                    <mxGeometry x="100" y="680" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="heartbeatCheck" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;rounded=0;" edge="1" parent="3" target="72">
+                    <mxGeometry x="-0.5" relative="1" as="geometry">
+                        <mxPoint x="230" y="790" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="230" y="720"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="77" value="提示掉线" style="rounded=0;whiteSpace=wrap;html=1;" parent="3" vertex="1">
+                    <mxGeometry x="78" y="800" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;rounded=0;" parent="1" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="920" y="360" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="580" y="360"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="61" value="onopen" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="60" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2203" relative="1" as="geometry">
+                        <mxPoint x="45" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" value="WS Server" style="swimlane;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="200" width="284" height="880" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="更新users" style="rounded=0;whiteSpace=wrap;html=1;" parent="4" vertex="1">
+                    <mxGeometry x="80" y="380" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" style="edgeStyle=none;rounded=0;html=1;" parent="4" source="51" target="81" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="将visitorId绑定至socket连接上" style="rounded=0;whiteSpace=wrap;html=1;" parent="4" vertex="1">
+                    <mxGeometry x="80" y="180" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" style="edgeStyle=none;rounded=0;html=1;" parent="4" source="81" target="23" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="根据gitTokn计算用户画像" style="rounded=0;whiteSpace=wrap;html=1;" parent="4" vertex="1">
+                    <mxGeometry x="82" y="280" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" style="edgeStyle=none;rounded=0;html=1;" parent="4" source="84" target="23" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="根据socket上挂载的visitorId剔除该用户" style="rounded=0;whiteSpace=wrap;html=1;" parent="4" vertex="1">
+                    <mxGeometry x="80" y="480" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;" parent="1" source="5" target="8" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Visitor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+                    <mxGeometry x="330" y="280" width="30" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="&lt;span style=&quot;font-size: 12px&quot;&gt;创建ws连接&lt;/span&gt;" style="edgeStyle=none;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="8" edge="1">
+                    <mxGeometry x="0.1039" relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="822" y="310"/>
+                        </Array>
+                        <mxPoint x="920" y="310" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="36" value="&lt;span style=&quot;color: rgba(0 , 0 , 0 , 0) ; font-family: monospace ; font-size: 0px&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22%7Btype%3A%20online%2C%20data%3A%20clientInfo%7D%22%20style%3D%22edgeLabel%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3B%22%20vertex%3D%221%22%20connectable%3D%220%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22810%22%20y%3D%22411%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="edgeStyle=none;rounded=0;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="35" target="84" edge="1">
+                    <mxGeometry x="-0.2511" relative="1" as="geometry">
+                        <mxPoint x="980" y="710" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="580" y="710"/>
+                            <mxPoint x="820" y="710"/>
+                            <mxPoint x="900" y="710"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                        <mxPoint x="640" y="710" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="59" value="{type: offline}" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="36" vertex="1" connectable="0">
+                    <mxGeometry x="-0.2526" y="-1" relative="1" as="geometry">
+                        <mxPoint x="79" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="39" style="edgeStyle=none;rounded=0;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="23" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="722" y="610" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="40" value="广播pageId最新user" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="39" vertex="1" connectable="0">
+                    <mxGeometry x="0.1832" y="1" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="10" target="51" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="{type: online, data: clientInfo}" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="57" vertex="1" connectable="0">
+                    <mxGeometry x="-0.0761" y="-1" relative="1" as="geometry">
+                        <mxPoint x="18" y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="87" value="onclose" style="edgeStyle=none;rounded=0;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="84">
+                    <mxGeometry x="-0.2308" relative="1" as="geometry">
+                        <mxPoint x="970" y="780" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="1060" y="780"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                        <mxPoint x="650" y="820" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

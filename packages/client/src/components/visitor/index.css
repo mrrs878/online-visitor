@@ -1,0 +1,20 @@
+.visitors-c {
+  display: flex;
+  position: fixed;
+  right: 10px;
+  width: max-content;
+  top: 10px;
+}
+
+.visitors-c .visitor-c {
+  margin-left: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #0081ff;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border: 1px solid #eee;
+}

@@ -1,0 +1,5 @@
+.header-c {
+  display: flex;
+  justify-content: space-between;
+  padding: 10 20px;
+}
